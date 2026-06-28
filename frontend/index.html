@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitOn - Professor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="mainTitle">FitOn</h1>
+            <div class="header-controls">
+                <button id="btnTema" class="btn-icon" type="button">🌙</button>
+                <span id="onlineStatus" class="status-online">● Online</span>
+                <span id="userInfo" style="margin-left: 16px; font-weight: 600;"></span>
+                <button id="btnLogout" class="btn-secondary" style="display:none;" type="button">Sair</button>
+            </div>
+        </header>
+
+        <main>
+            <section id="telaLogin" class="page active">
+                <div class="login-box">
+                    <h2>Login do Professor</h2>
+                    <form id="formLogin">
+                        <input type="text" id="inputUsername" placeholder="Usuário" required>
+                        <input type="password" id="inputSenha" placeholder="Senha" required>
+                        <button type="submit" class="btn-primary">Entrar</button>
+                        <p id="loginError" style="color: var(--danger); display:none;"></p>
+                    </form>
+                </div>
+            </section>
+            <section id="telaAlunos" class="page">
+                <div class="alunos-header">
+                    <h2>Meus Alunos</h2>
+                    <div class="form-aluno">
+                        <input type="text" id="inputAlunoNome" placeholder="Nome do aluno" maxlength="50">
+                        <button id="btnAddAluno" class="btn-primary" type="button">Adicionar</button>
+                    </div>
+                </div>
+                <div id="listaAlunos" class="alunos-list">
+                    <p class="loading">Carregando alunos...</p>
+                </div>
+            </section>
+
+            <section id="telaTreino" class="page">
+                <div class="treino-header">
+                    <button id="btnVoltarAlunos" class="btn-secondary" type="button">← Voltar</button>
+                    <h2 id="tituloAluno">Treino de <span id="nomeAluno"></span></h2>
+                </div>
+                <div class="treino-content">
+                    <div class="sidebar">
+                        <h3>Divisões</h3>
+                        <div id="listaDivisoes" class="divisoes-list">
+                            <p class="loading">Carregando divisões...</p>
+                        </div>
+                        <div class="form-divisao">
+                            <input type="text" id="inputDivisaoNome" placeholder="Nome da divisão" maxlength="50">
+                            <input type="text" id="inputDivisaoDesc" placeholder="Descrição (opcional)">
+                            <button id="btnAddDivisao" class="btn-primary" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div id="exerciciosContainer">
+                            <div class="empty-state">
+                                <h3>Selecione uma divisão</h3>
+                                <p>Clique em uma divisão para ver os exercícios</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
