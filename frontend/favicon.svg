@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <!-- Fundo vermelho arredondado -->
+    <rect x="5" y="5" width="90" height="90" rx="20" fill="#FF4B4B" />
+    
+    <!-- Rotação para dar um visual dinâmico -->
+    <g transform="rotate(-45 50 50)">
+        <!-- Barra do halter -->
+        <rect x="25" y="46" width="50" height="8" fill="#FFFFFF" rx="2" />
+        <!-- Pesos do lado esquerdo -->
+        <rect x="28" y="35" width="8" height="30" rx="2" fill="#FFFFFF" />
+        <rect x="18" y="25" width="8" height="50" rx="2" fill="#FFFFFF" />
+        <!-- Pesos do lado direito -->
+        <rect x="64" y="35" width="8" height="30" rx="2" fill="#FFFFFF" />
+        <rect x="74" y="25" width="8" height="50" rx="2" fill="#FFFFFF" />
+    </g>
+</svg>
